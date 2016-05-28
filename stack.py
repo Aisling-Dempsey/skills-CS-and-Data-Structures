@@ -76,10 +76,7 @@ class Stack(object):
             3
         """
 
-        if not self._list:
-            return "<Stack (empty)>"
-        else:
-            return len(self._list)
+        return len(self._list)
         
     def empty(self):
         """Empty stack::

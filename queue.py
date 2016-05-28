@@ -49,7 +49,7 @@ class Queue(object):
             >>> q
             <Queue ['buy flight', 'pack', 'enjoy vacation']>
 
-            >>> q.length
+            >>> q.length()
             3
         """
 

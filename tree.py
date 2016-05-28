@@ -27,6 +27,11 @@ class Node(object):
         """
 
         # FIXME
+        if self.children is not None:
+            return len(self.children)
+        else:
+            return "This node is a leaf"
+
 
         pass
 
@@ -47,10 +52,17 @@ class Tree(object):
 
         Start at the root, and return None if not found.
         """
+        to_visit = [self.root]
 
-        # FIXME
+        while to_visit:
+            current_node = to_visit.pop()
+            if current_node.data == data:
+                return current_node
+            to_visit.extend(current_node.children)
 
-        pass
+        return None
+
+        # pass
 
     def breadth_first_search(self, data):
         """Return node object with this data, traversing the tree breadth-first.

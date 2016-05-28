@@ -78,7 +78,13 @@ class LinkedList(object):
 
         # FIXME
 
-        pass
+        current = self.head
+
+        print current.data
+        while current.next is not None:
+            print current.next.data
+            current = current.next
+
 
     def get_node_by_index(self, idx):
         """Return a node with the given index::
@@ -94,7 +100,12 @@ class LinkedList(object):
             >>> ll.get_node_by_index(2)
             <Node fish>
         """
+        i = 0
+        current = self.head
+        while i != idx:
+            i += 1
+            current = current.next
+        return current
+        FIXME
 
-        # FIXME
-
-        pass
+        # pass
