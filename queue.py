@@ -54,8 +54,8 @@ class Queue(object):
         """
 
         # FIXME
+        self._list.append(item)
 
-        pass
 
     def peek(self):
         """Return but don't remove the first item in the queue.
@@ -72,6 +72,9 @@ class Queue(object):
             <Queue ['buy flight', 'pack', 'enjoy vacation']>
         """
 
-        # FIXME
+        try:
+            return self._list[0]
+        except IndexError:
+            return "<This list is empty>"
 
-        pass
+        # pass
