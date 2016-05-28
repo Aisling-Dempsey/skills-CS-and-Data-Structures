@@ -1,0 +1,60 @@
+Runtime
+1) the workload is the length of the list, or as it is referred to in Big O notation: n
+2)  - O(2^n)     (least efficient)
+    - O(n^2)
+    - O(n log n)
+    - O(n)
+    - O(log n)
+    - O(2)        (most efficient, once n > 2)
+
+
+Stacks and Queues:
+1)
+    1) Generally speaking, a Stack. That said, a flatbed could be unloaded from any point on the trailer, that's
+    one of the main advantages of that configuration. They're typically used when you don't know what order you will
+    be accessing the things on them from (in that way, they're not unlike linked lists since you can remove things from
+    the middle with minimal work).
+
+    2) a Queue
+    3) assuming you were able to make a list in which mathematical operations were ordered by their operation type
+       (PEMDAS), then a queue.
+
+2)
+    1) Any sort of waiting line (grocery store, dmv, amusement park, etc.)
+    2) where to apply a second coat of paint (while waiting for it to dry)
+
+3)
+    1) Folding clean laundry (the last item back in the hamper from the dryer is the first you fold.
+    2) Locations to check for a lost item.
+
+Linked Lists
+1) The nodes are what we would consider the elements in a built-in list. In a linked list, they are made up of
+    both the data and the next values.
+
+    In the diagram, the nodes are the three adjacent divided boxes (one division representing data and the other
+    the next) that are pointed at by LLIST on the left and point to None on the right.
+
+    The data for each node (in order) is as follows:
+        "Apple"
+        "Berry"
+        "Cherry"
+
+    The head is the first node, which contains the data "Apple", and the tail is not defined in our diagram. If the
+    tail were defined, it would point the the last node in the list, which in this diagram has the data "Cherry"
+
+2) In a singly linked list, a node only points to the next node, whereas in a doubly linked list, it points to both
+    the previous and next nodes in the list.
+
+3) If you keep track of a tail, you can go directly to that node and make the appropriate adjustments to its next
+attribute rather than traversing the entire list.
+
+Trees
+1) From first to last: ["Italian", "Indian", "Mexican", "lasagna", "pizza", "tikka masala", "saag", "burrito"]
+
+2) From first to last: ["Mexican", "ecnchiladas", "tacos", "burrito", "Indian", "saag", "tikka masala", "Italian",
+                        "pizza", "Sicilian", "New York-style", "Chicago-style"]
+
+3) A node in a binary search tree only ever has 2 children and one parent, with one child being less than the parent,
+   and the other being greater than the parent. Assuming a well balanced tree, this allows us to search for an something
+   extremely fast.
+

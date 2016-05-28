@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>CS and Data Structures Assessment 1</title>
+
+    <link rel="stylesheet" href="./CS and Data Structures Assessment 1_files/pygments.css" type="text/css">
+    <link rel="stylesheet" href="./CS and Data Structures Assessment 1_files/handouts-sphinx.css">
+
+    <link href="./CS and Data Structures Assessment 1_files/css" rel="stylesheet" type="text/css">
+<style type="text/css"></style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body data-pinterest-extension-installed="cr1.39.1">
+<div id="page-wrapper">
+    <div id="page-sidebar">
+        <header>
+            <p class="project">Hackbright Fellowship Spring 2016</p>
+
+            <p class="title">CS and Data Structures Assessment 1</p>
+
+            <p class="backlink"><a href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/"> « Back to Fellowship
+                Homepage</a></p>
+
+        </header>
+        <div id="toc">
+            <ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#">CS and Data Structures Assessment 1</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#concept-review">Concept Review</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#runtime-concepts">Runtime Concepts</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#stacks-and-queues">Stacks and Queues</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#linked-lists">Linked lists</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#trees">Trees</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#part-1-discussion-questions">Part 1: Discussion Questions</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#runtime">Runtime</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id1">Stacks and Queues</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id2">Linked Lists</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id3">Trees</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#part-2-skills-assessment">Part 2: Skills Assessment</a><ul>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id4">Runtime</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#stacks">Stacks</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#queues">Queues</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id5">Linked Lists</a></li>
+<li><a class="reference internal" href="http://fellowship.hackbrightacademy.com/materials/exercises/skills-cs-data-struct-1/#id6">Trees</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+    <div id="page-content">
+        
+  <div class="section" id="cs-and-data-structures-assessment-1">
+<h1>CS and Data Structures Assessment 1</h1>
+<div class="section" id="concept-review">
+<h2>Concept Review</h2>
+<div class="section" id="runtime-concepts">
+<h3>Runtime Concepts</h3>
+<ul class="simple">
+<li>Big O Notation</li>
+<li>Why it’s important to think about runtime<ul>
+<li>Interviews (be able to describe the runtime of your own solutions)</li>
+<li>A language to describe algorithm efficiency, and compare alternate solutions</li>
+</ul>
+</li>
+<li>Runtimes to know<ul>
+<li>Linear, or O(n):
+as size of work increases, length of time the algorithm takes increases linearly</li>
+<li>Constant, or O(1):
+even when size of work increases, length of time is always the same</li>
+<li>Logarithmic: binary searches (looking up a word in a dictionary, for example);
+the work is divided in half with each iteration of the algorithm<ul>
+<li>O(log n)</li>
+<li>O(n log n)  (do something with <cite>O(log n)</cite> <cite>n</cite> times)</li>
+</ul>
+</li>
+<li>Quadratic, or O(n<sup>2</sup>): nested for-loops, typically</li>
+<li>Exponential: password cracking algorithms, for example<ul>
+<li>O(2<sup>n</sup>)</li>
+<li>O(n<sup>n</sup>)</li>
+</ul>
+</li>
+<li>Factorial, or O(n!)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="stacks-and-queues">
+<h3>Stacks and Queues</h3>
+<ul class="simple">
+<li>Concepts, not implementations<ul>
+<li>Stacks and queues are ways to manage and process information</li>
+<li>You can build a stack or queue out of different implementations (lists, linked lists, etc)</li>
+</ul>
+</li>
+<li>Stack: LIFO</li>
+<li>Queue: FIFO</li>
+</ul>
+</div>
+<div class="section" id="linked-lists">
+<h3>Linked lists</h3>
+<ul class="simple">
+<li>A data structure for storing an iterable collection</li>
+<li>Can be used similarly to a regular Python list (“array”)</li>
+<li>But have performance differences</li>
+</ul>
+</div>
+<div class="section" id="trees">
+<h3>Trees</h3>
+<ul class="simple">
+<li>Trees: storing hierarchical data (org charts, taxonomies)</li>
+<li>Binary Search Trees: searching a binary tree using a “rule”</li>
+<li>Navigating trees using BFS and DFS</li>
+</ul>
+</div>
+</div>
+<div class="section" id="part-1-discussion-questions">
+<h2>Part 1: Discussion Questions</h2>
+<div class="section" id="runtime">
+<h3>Runtime</h3>
+<ol class="arabic simple">
+<li>When calculating the Big O notation for a particular algorithm, it’s necessary
+to consider the length of time it takes for the algorithm to run as the algorithm’s
+workload approaches the size of infinity. What is the <strong>workload</strong> of a function
+that takes in a list of integers and returns a new list of the even integers?</li>
+<li>Order the following runtimes in ascending order by efficiency as <cite>n</cite> approaches
+infinity:<ul>
+<li>O(log n),</li>
+<li>O(n<sup>2</sup>)</li>
+<li>O(n log n)</li>
+<li>O(n)</li>
+<li>O(2<sup>n</sup>)</li>
+<li>O(1)</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="id1">
+<h3>Stacks and Queues</h3>
+<ol class="arabic simple">
+<li>In the following cases, would a stack or queue be an appropriate data
+structure?<ol class="upperalpha">
+<li>The process of loading and unloading pallets onto a flatbed truck</li>
+<li>Putting bottle caps on bottles of beer as they roll down an assembly line</li>
+<li>Calculating the solution to this mathematical expression: <code class="docutils literal"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">(7</span> <span class="pre">*</span> <span class="pre">4)</span> <span class="pre">-</span> <span class="pre">(3</span> <span class="pre">/</span> <span class="pre">2)</span></code></li>
+</ol>
+</li>
+<li>Describe 2 more examples of when a queue would be an appropriate data structure.</li>
+<li>Describe 2 more examples of when a stack would be an appropriate data structure.</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>Linked Lists</h3>
+<ol class="arabic simple">
+<li>Given the below linked list, which are the nodes? What is the data for each node?
+Where is the head? Where is the tail? (Please be as specific as possible — exactly
+which parts of the diagram correspond to each part? Arrows? Boxes? Text?)</li>
+</ol>
+<div class="graphviz">
+<img src="./CS and Data Structures Assessment 1_files/graphviz-9d1bfe45f44c3720814826a4b6a956a85f2802e6.svg">
+</div>
+<ol class="arabic simple" start="2">
+<li>What’s the difference between a doubly and singly linked list?</li>
+<li>Why is it faster to append to a linked list if we keep track of the <cite>tail</cite>
+as an attribute?</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h3>Trees</h3>
+<div class="graphviz">
+<img src="./CS and Data Structures Assessment 1_files/graphviz-e013ff86fe5c8eeebf4b3b0ae8bf151ce3262e54.svg">
+</div>
+<ol class="arabic simple">
+<li>Given the above tree, in what order would a Breadth First Search (BFS) algorithm
+visit each node until finding <cite>burrito</cite> (starting at <cite>food</cite>)?</li>
+<li>Given the above tree, in what order would a Depth First Search algorithm
+visit each node until finding <cite>Chicago-style</cite> (starting at <cite>food</cite>)?</li>
+<li>How is a binary search tree different from other trees?</li>
+</ol>
+</div>
+</div>
+<div class="section" id="part-2-skills-assessment">
+<h2>Part 2: Skills Assessment</h2>
+<div class="section" id="id4">
+<h3>Runtime</h3>
+<p>In the file called <cite>runtime.py</cite>, there are 5 functions.</p>
+<ol class="arabic simple">
+<li>What is the runtime for <cite>string_compare</cite>? Add your answer to the end of the
+function’s docstring.</li>
+<li>What is the runtime for <cite>has_exotic_animals</cite>? Add your answer to the end of the
+function’s docstring.</li>
+<li>What is the runtime for <cite>sum_zero_1</cite>? Add your answer to the end of the
+function’s docstring.</li>
+<li>What is the runtime for <cite>sum_zero_2</cite>? Add your answer to the end of the
+function’s docstring.</li>
+<li>What is the runtime for <cite>sum_zero_3</cite>? Add your answer to the end of the
+function’s docstring.</li>
+</ol>
+</div>
+<div class="section" id="stacks">
+<h3>Stacks</h3>
+<p>In the file called <cite>stack.py</cite>, there is a class definition and some methods
+for a <cite>Stack</cite> class.</p>
+<ol class="arabic simple" start="6">
+<li>Finish the methods for <cite>length</cite>.</li>
+<li>Finish the method for <cite>empty</cite>.</li>
+<li>Finish the method for <cite>is_empty</cite>.</li>
+</ol>
+</div>
+<div class="section" id="queues">
+<h3>Queues</h3>
+<p>In the file called <cite>queue.py</cite>, there is a class definition and some methods
+for a Queue class.</p>
+<ol class="arabic simple" start="9">
+<li>Finish the method for  <cite>enqueue</cite></li>
+<li>Finish the method for <cite>peek</cite>.</li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h3>Linked Lists</h3>
+<p>In the file called <cite>linkedlist.py</cite> there is a class definition for a <cite>Node</cite> in
+a linked list, as well as a class definition for a <cite>LinkedList</cite>. There are methods
+already defined for <cite>remove_node_by_index</cite>, <cite>find_node</cite> (by data), and <cite>add_node</cite>.</p>
+<ol class="arabic simple" start="11">
+<li>Finish the method called <cite>print_list</cite>.</li>
+<li>Finish the method called <cite>get_node by index</cite>.</li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h3>Trees</h3>
+<p>In the file called <cite>tree.py</cite> there is a class definition for a <cite>Tree</cite>,
+which we might use for keeping track of an organizational chart at a company.
+There is also a class definition for a <cite>Node</cite>, which would represent an employee.
+Each node has an attribute called 1children1, which is a list of other instances of
+nodes. In the real world, a node’s <cite>children</cite> would represent the people that
+node/person supervises.</p>
+<ol class="arabic simple" start="13">
+<li>In the <cite>Node</cite> class, finish the method called <cite>get_num_children</cite>. This function</li>
+</ol>
+<blockquote>
+<div>could be used to count the number of people that person supervises.</div></blockquote>
+<ol class="arabic simple" start="14">
+<li>In the <cite>Tree</cite> class, finish the method called <cite>breadth_first_search</cite>.
+Hover over the section below if you need a hint.</li>
+</ol>
+<div class="hover-reveal topic">
+<p class="topic-title first">Hint</p>
+<p>The <cite>depth_first_search</cite> function uses a stack to keep track of the nodes that
+need to be visited. Notice it doesn’t
+actually have to use an instance of the <cite>Stack</cite> class, here. Simply initialize
+an empty list of nodes to visit, and when deciding which node to visit next,
+take from the <em>end</em> of the list of nodes to visit, instead of the beginning.
+This is a list acting like a stack, but it’s a stack nonetheless!</p>
+<p>Why does this work? It will guarantee that the nodes that are most recently
+added to the list of nodes to visit will be visited first. First the root’s
+child will get added, and directly after that, one of the root’s grandchildren,
+and then directly after that, one of the root’s great grandchildren, and so
+on down the line.</p>
+<p>In order to implement breadth first search, you’ll need to use a queue to keep
+track of which nodes to visit. This means that you’ll add from the end, but
+<em>take from the beginning</em>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+</div>
+
+<span style="height: 20px; width: 40px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; top: 2041px; left: 385px; background-image: url(&quot;data:image/png;base64,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&quot;); background-color: transparent; background-size: 40px 20px;"></span></body></html>
